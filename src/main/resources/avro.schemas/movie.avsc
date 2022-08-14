@@ -1,0 +1,58 @@
+[
+  {
+    "type": "record",
+    "namespace": "com.kaanaydemir.movie.schemas",
+    "name": "Actor",
+    "version": 1,
+    "doc": "Actor and Actoress",
+    "fields": [
+      {
+        "type": "string",
+        "name": "first_name",
+        "default": ""
+      },
+      {
+        "type": "string",
+        "name": "last_name",
+        "default": ""
+      },
+      {
+        "type": "string",
+        "name": "birth_date",
+        "default": ""
+      }
+    ]
+  },
+  {
+    "type": "record",
+    "namespace": "com.kaanaydemir.movie.schemas",
+    "name": "Movie",
+    "version": 1,
+    "doc": "Movie class",
+    "fields": [
+      {
+        "type": "string",
+        "name": "title",
+        "default": "",
+        "doc": "Movie Title"
+      },
+      {
+        "type": "string",
+        "name": "release_date",
+        "default": ""
+      },
+      {
+        "type": "float",
+        "name": "rating",
+        "default": 0
+      },
+      {
+        "type": {
+          "type": "array",
+          "items": "com.kaanaydemir.movie.schemas.Actor"
+        },
+        "name": "cast"
+      }
+    ]
+  }
+]
